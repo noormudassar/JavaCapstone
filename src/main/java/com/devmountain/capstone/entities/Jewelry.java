@@ -1,5 +1,6 @@
 package com.devmountain.capstone.entities;
 
+import com.devmountain.capstone.dtos.JewelryDto;
 import com.fasterxml.jackson.annotation.JsonBackReference;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
@@ -25,4 +26,13 @@ public class Jewelry {
     @ManyToOne
     @JsonBackReference
     private User user;
+
+    public Jewelry(JewelryDto jewelryDto) {
+        if (jewelryDto.getJewelry_name() != null) {
+            this.jewelry_name = jewelryDto.getJewelry_name();
+        }
+        if (jewelryDto.getJewelry_type() != null) {
+            this.jewelry_type = jewelryDto.getJewelry_type();
+        }
+    }
 }
