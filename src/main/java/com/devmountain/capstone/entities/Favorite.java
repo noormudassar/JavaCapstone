@@ -15,3 +15,6 @@ public class Favorite {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 }
+
+
+// I NEED TO ADD RELATIONSHIPS BETWEEN JEWELRY AND FAVORITES AND USERS AND FAVORITES
