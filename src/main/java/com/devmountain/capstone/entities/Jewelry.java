@@ -1,9 +1,16 @@
 package com.devmountain.capstone.entities;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
 @Entity
 @Table(name = "Jewelry")
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
 public class Jewelry {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -15,36 +22,7 @@ public class Jewelry {
     @Column
     private String jewelry_name;
 
-    public Jewelry(Long id, String jewelry_type, String jewelry_name) {
-        this.id = id;
-        this.jewelry_type = jewelry_type;
-        this.jewelry_name = jewelry_name;
-    }
-
-    public Jewelry() {
-    }
-
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
-
-    public String getJewelry_type() {
-        return jewelry_type;
-    }
-
-    public void setJewelry_type(String jewelry_type) {
-        this.jewelry_type = jewelry_type;
-    }
-
-    public String getJewelry_name() {
-        return jewelry_name;
-    }
-
-    public void setJewelry_name(String jewelry_name) {
-        this.jewelry_name = jewelry_name;
-    }
+    @ManyToOne
+    @JsonBackReference
+    private User user;
 }
