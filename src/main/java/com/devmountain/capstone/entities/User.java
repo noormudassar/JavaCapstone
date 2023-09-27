@@ -38,6 +38,9 @@ public class User {
     @JsonManagedReference
     private Set<Jewelry> jewelrySet = new HashSet<>();
 
+    @OneToMany(mappedBy = "user", fetch = FetchType.LAZY, cascade = {CascadeType.MERGE, CascadeType.PERSIST})
+    private Set<Favorite> favoriteSet = new HashSet<>();
+
     public User(UserDto userDto) {
         if (userDto.getFirstname() != null) {
             this.firstname = userDto.getFirstname();

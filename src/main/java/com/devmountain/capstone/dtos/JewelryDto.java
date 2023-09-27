@@ -14,6 +14,7 @@ public class JewelryDto implements Serializable {
     private Long id;
     private String jewelry_type;
     private String jewelry_name;
+    private String jewelry_image;
     private UserDto userDto;
     private FavoriteDto favoriteDto;
 
@@ -26,6 +27,9 @@ public class JewelryDto implements Serializable {
         }
         if (jewelry.getJewelry_name() != null) {
             this.jewelry_name = jewelry.getJewelry_name();
+        }
+        if (jewelry.getJewelry_image() != null) {
+            this.jewelry_image = jewelry.getJewelry_image();
         }
     }
 }
