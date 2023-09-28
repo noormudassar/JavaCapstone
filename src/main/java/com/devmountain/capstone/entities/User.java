@@ -37,9 +37,9 @@ public class User {
     @OneToMany(mappedBy = "user", fetch = FetchType.LAZY, cascade = {CascadeType.MERGE, CascadeType.PERSIST})
     @JsonManagedReference
     private Set<Jewelry> jewelrySet = new HashSet<>();
-
-    @OneToMany(mappedBy = "user", fetch = FetchType.LAZY, cascade = {CascadeType.MERGE, CascadeType.PERSIST})
-    private Set<Favorite> favoriteSet = new HashSet<>();
+//
+//    @OneToMany(mappedBy = "user", fetch = FetchType.LAZY, cascade = {CascadeType.MERGE, CascadeType.PERSIST})
+//    private Set<Favorite> favoriteSet = new HashSet<>();
 
     public User(UserDto userDto) {
         if (userDto.getFirstname() != null) {

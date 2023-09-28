@@ -1,2 +1,6 @@
-body {
+body {background-color: coral;}
+
+.nav-container {
+    width: 100%;
+    white-space: nowrap;
 }

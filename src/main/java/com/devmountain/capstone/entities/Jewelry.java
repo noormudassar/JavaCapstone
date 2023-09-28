@@ -33,8 +33,8 @@ public class Jewelry {
     @JsonBackReference
     private User user;
 
-    @ManyToMany(mappedBy = "jewelry", fetch = FetchType.LAZY, cascade = {CascadeType.MERGE, CascadeType.PERSIST})
-    private Set<Favorite> favoriteSet = new HashSet<>();
+//    @ManyToMany(mappedBy = "jewelry", fetch = FetchType.LAZY, cascade = {CascadeType.MERGE, CascadeType.PERSIST})
+//    private Set<Favorite> favoriteSet = new HashSet<>();
 
     public Jewelry(JewelryDto jewelryDto) {
         if (jewelryDto.getJewelry_name() != null) {

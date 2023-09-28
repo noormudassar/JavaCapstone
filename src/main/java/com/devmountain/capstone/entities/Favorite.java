@@ -20,9 +20,9 @@ public class Favorite {
     @JsonBackReference
     private User user;
 
-    @ManyToMany
-    @JsonBackReference
-    private Jewelry jewelry;
+//    @ManyToMany
+//    @JsonBackReference
+//    private Jewelry jewelry;
 }
 
 
