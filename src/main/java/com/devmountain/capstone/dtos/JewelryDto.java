@@ -4,6 +4,7 @@ import com.devmountain.capstone.entities.Jewelry;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.springframework.core.serializer.support.SerializationDelegate;
 
 import java.io.Serializable;
 
@@ -16,7 +17,6 @@ public class JewelryDto implements Serializable {
     private String jewelry_name;
     private String jewelry_image;
     private UserDto userDto;
-    private FavoriteDto favoriteDto;
 
     public JewelryDto(Jewelry jewelry) {
         if (jewelry.getId() != null) {

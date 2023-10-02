@@ -18,8 +18,6 @@ public class UserDto implements Serializable {
     private String lastname;
     private String email;
     private String password;
-    private Set<JewelryDto> jewelryDtoSet = new HashSet<>();
-    private Set<FavoriteDto> favoriteDtoSet = new HashSet<>();
 
     public UserDto(User user) {
         if (user.getId() != null) {
